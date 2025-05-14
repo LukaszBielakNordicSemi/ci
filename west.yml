@@ -1,0 +1,40 @@
+manifest:
+  self:
+    path: nrf/zephyr
+    west-commands: scripts/west-commands.yml
+
+  remotes:
+    - name: ncs
+      url-base: https://github.com/nrfconnect
+  
+  projects:
+    - name: nrf
+      remote: ncs
+      repo-path: sdk-nrf
+      revision: main
+      import: true
+    
+    - name: devacademy-ncsfund
+      path: nrf/samples/devacademy/ncs-fund
+      revision: main
+      url: https://github.com/NordicDeveloperAcademy/ncs-fund.git
+      
+    - name: devacademy-ncsinter
+      path: nrf/samples/devacademy/ncs-inter
+      revision: main
+      url: https://github.com/NordicDeveloperAcademy/ncs-inter.git
+
+    - name: devacademy-btfud
+      path: nrf/samples/devacademy/bt-fund
+      revision: main
+      url: https://github.com/NordicDeveloperAcademy/bt-fund.git      
+      
+    - name: devacademy-cellfund
+      path: nrf/samples/devacademy/cell-fund
+      revision: main
+      url: https://github.com/NordicDeveloperAcademy/cell-fund.git     
+
+    - name: devacademy-wififund
+      path: nrf/samples/devacademy/wifi-fund
+      revision: main
+      url: https://github.com/NordicDeveloperAcademy/wifi-fund.git      
